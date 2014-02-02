@@ -7,14 +7,14 @@ using myAppMemory.ViewModels;
 
 namespace myAppMemory.Controllers {
   public class VMController : Controller {
-    private Repo_Student repo = new Repo_Student();
+    private Repo_Student repo = new Repo_Student(); // 10
     //
     // GET: /VM/
-    public ActionResult Index() {
+    public ActionResult Index() { // 20
 
       ViewBag.id = 1;
 
-      return View(repo.getStudentsPublic());
+      return View(repo.getStudentNames()); // 30 
     }
 
     public ActionResult Create() {
@@ -40,3 +40,9 @@ namespace myAppMemory.Controllers {
     }
   }
 }
+
+// Index()
+/* 30. a. Go to ViewModels/Repo_Student.cs
+ *     b. Call getStudentNames()
+ *     c. Send its retval to Views/VM/Index.cshtml [the eponymous view]
+ */
