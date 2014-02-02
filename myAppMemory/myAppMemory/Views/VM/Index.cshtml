@@ -1,4 +1,4 @@
-﻿@model IEnumerable<myAppMemory.ViewModels.StudentPublic>
+﻿@model IEnumerable<myAppMemory.ViewModels.StudentName>
 
 @{
     ViewBag.Title = "Index";
@@ -35,9 +35,9 @@
             @item.LastName
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StudentNumber }) |
-            @Html.ActionLink("Details", "Details", new { id = item.StudentNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.StudentNumber })
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
         </td>
     </tr>
 }

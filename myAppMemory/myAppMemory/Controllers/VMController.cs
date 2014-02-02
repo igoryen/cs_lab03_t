@@ -10,11 +10,11 @@ namespace myAppMemory.Controllers {
     private Repo_Student repo = new Repo_Student(); // 10
     //
     // GET: /VM/
-    public ActionResult Index(string StNo) { // 20
+    public ActionResult Index() { // 20
 
       //ViewBag.id = 1;
 
-      return View(repo.getStudentPublic(StNo)); // 30 
+      return View(repo.getStudentNames()); // 30 
     }
 
     public ActionResult Create() { // 40
@@ -31,8 +31,8 @@ namespace myAppMemory.Controllers {
       }
     }
 
-    public ActionResult Details(string StNo) { // 70
-      return View(repo.getStudentPublic(StNo)); // 80
+    public ActionResult Details(int? id) { // 70
+      return View(repo.getStudentPublic(id)); // 80
     }
 
     public ActionResult Error() {
