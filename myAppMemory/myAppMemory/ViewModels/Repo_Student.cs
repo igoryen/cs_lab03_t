@@ -25,8 +25,8 @@ namespace myAppMemory.ViewModels {
       return rls;
     }
 
-    public StudentPublic getStudentPublic(int? id) {
-      var st = Students.FirstOrDefault(n => n.Id == id);
+    public StudentPublic getStudentPublic(string StNo) {
+      var st = Students.FirstOrDefault(n => n.StudentNumber == StNo);
 
       StudentPublic stu = new StudentPublic();
       stu.FirstName = st.FirstName;
