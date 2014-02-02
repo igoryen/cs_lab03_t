@@ -38,6 +38,19 @@ namespace myAppMemory.ViewModels {
 
     }
 
+    public IEnumerable<StudentPublic> getStudentsPublic() { // 1
+
+    }
+
+    public IEnumerable<StudentFull> getStudentsFull() {
+
+    }
+
+    public IEnumerable<StudentName> getStudentNames() {
+
+    }
+
+
     //public IEnumerable<StudentPublic> getStudentsPublic()
 
     public StudentFull createStudent(StudentFull st) {
@@ -50,3 +63,10 @@ namespace myAppMemory.ViewModels {
     public List<Student> Students { get; set; }
   }
 }
+// getStudentsPublic() - gets a List of all Students, mapped to a List of StudentPublic objects, sorted by StudentNumber
+
+// getStudentsFull() - gets a List of all Students, mapped to a List of StudentFull objects, sorted by LastName
+
+// getStudentNames() - gets a List of all Students, mapped to a List of StudentName objects, sorted by LastName
+
+
