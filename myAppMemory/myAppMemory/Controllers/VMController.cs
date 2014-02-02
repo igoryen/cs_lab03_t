@@ -11,7 +11,10 @@ namespace myAppMemory.Controllers {
     //
     // GET: /VM/
     public ActionResult Index() {
-      return View();
+
+      ViewBag.id = 1;
+
+      return View(repo.getStudentsPublic());
     }
 
     public ActionResult Create() {
