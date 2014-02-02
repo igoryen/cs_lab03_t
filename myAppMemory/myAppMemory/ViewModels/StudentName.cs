@@ -5,7 +5,7 @@ using System.Web;
 
 namespace myAppMemory.ViewModels {
   public class StudentName { // 1
-    public string StudentId { get; set; }
+    public int StudentId { get; set; }
 
     public string FirstName { get; set; }
 

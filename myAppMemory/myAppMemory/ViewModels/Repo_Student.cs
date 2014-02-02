@@ -74,8 +74,21 @@ namespace myAppMemory.ViewModels {
       return rls; // 90
     }
 
-    public IEnumerable<StudentName> getStudentNames() {
+    public IEnumerable<StudentName> getStudentNames() { // 95
 
+      List<StudentFull> ls = new List<StudentFull>();    // 100
+      List<StudentName> rls = new List<StudentName>();    // 105
+
+      foreach (var item in ls) {      // 110
+        StudentName row = new StudentName(); // 115
+
+        row.StudentId = item.StudentId; // 50
+        row.FirstName = item.FirstName;
+        row.LastName = item.LastName;
+
+        rls.Add(row); // 51 
+      }
+      return rls; // 52
     }
 
 
@@ -112,6 +125,14 @@ namespace myAppMemory.ViewModels {
  * 90. produce the filled out 5-column table "StudentFull" 
  */
 
-// getStudentNames() - gets a List of all Students, mapped to a List of StudentName objects, sorted by LastName
-
+// getStudentNames -- gets a List of all Students, mapped to a List of StudentName objects, sorted by LastName 
+/* 45. take a table... ??? how to use it???
+ * 46. make a list of students ordered by LastName. ls = list
+ * 47. make a 3-column table "StudentName". rls = ready list
+ * 48. loop through the list of students ordered by LastName
+ * 49. make a 3-column table row "StudentName"
+ * 50. fill out the 3-column table row
+ * 51. add the StudentPublic to the list for StudentPublic's
+ * 52. 
+ */
 
