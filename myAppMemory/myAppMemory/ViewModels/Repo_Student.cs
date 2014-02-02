@@ -76,13 +76,13 @@ namespace myAppMemory.ViewModels {
 
     public IEnumerable<StudentName> getStudentNames() { // 95
 
-      List<StudentFull> ls = new List<StudentFull>();    // 100
+      var ls = this.Students.OrderBy(n => n.LastName);    // 100
       List<StudentName> rls = new List<StudentName>();    // 105
 
       foreach (var item in ls) {      // 110
         StudentName row = new StudentName(); // 115
 
-        row.StudentId = item.StudentId; // 50
+        row.StudentId = item.Id; // 50
         row.FirstName = item.FirstName;
         row.LastName = item.LastName;
 
